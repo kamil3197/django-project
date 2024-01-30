@@ -29,5 +29,5 @@ class Post(models.Model):
     date = models.DateField()
     slug = models.SlugField(default="", blank=True, null=False, db_index=True)
     content = models.CharField(max_length=300)
-    tag = models.ManyToManyField(Tag, null=True)
+    tag = models.ManyToManyField(Tag)
     author = models.ForeignKey(Author, on_delete=models.CASCADE, null=True)
